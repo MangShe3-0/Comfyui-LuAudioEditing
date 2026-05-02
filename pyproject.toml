@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Comfyui-LuAudioEditing"
+version = "1.0.0"
+description = "ComfyUI 音频编辑节点包，基于 FFmpeg，实现音频读取、拼接、格式转换、双轨混音和保存"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "torch",
+]
+
+[project.urls]
+Repository = "https://github.com/你的用户名/Comfyui-LuAudioEditing"

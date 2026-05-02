@@ -1,0 +1,35 @@
+{
+  "workflows": [
+    {
+      "name": "音频目录读取 + 批量格式转换",
+      "description": "扫描音频目录，批量转换为 mp3 格式并保存",
+      "nodes": [
+        "LuAudioDirectoryLoader",
+        "LuAudioConvertBatch"
+      ]
+    },
+    {
+      "name": "双轨混音 + 保存",
+      "description": "将两路音频混音并保存为 wav",
+      "nodes": [
+        "LuAudioMix",
+        "LuAudioSave"
+      ]
+    },
+    {
+      "name": "单个音频格式转换",
+      "description": "将 AUDIO 对象转换为指定格式",
+      "nodes": [
+        "LuAudioConvertSingle",
+        "LuAudioSave"
+      ]
+    },
+    {
+      "name": "批量拼合音频",
+      "description": "将多个音频文件拼接为一个",
+      "nodes": [
+        "LuAudioConcat"
+      ]
+    }
+  ]
+}
